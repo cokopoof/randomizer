@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+
+    #button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      font-size: 35px;
+      background: darkgray;
+      color: azure;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    button:hover {
+      background: crimson;
+      cursor: pointer;
+    }
+
+    #parent {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .children {
+      background: rgba(90, 190, 220, 0.7);
+      border-radius: 12px;
+      min-height: 150px;
+      color: white;
+      font-size: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="button-container">
+    <button type="button" name="button" onclick="ranomizeDomOrder('#parent', '.children')">Randomize</button>
+  </div>
+  <div id="parent">
+    <div class="children">1</div>
+    <div class="children">2</div>
+    <div class="children">3</div>
+    <div class="children">4</div>
+    <div class="children">5</div>
+    <div class="children">6</div>
+    <div class="children">7</div>
+    <div class="children">8</div>
+    <div class="children">9</div>
+    <div class="children">10</div>
+  </div>
+
+  <script type="text/javascript" src="randomize.js"></script>
+</body>
+
+</html>
